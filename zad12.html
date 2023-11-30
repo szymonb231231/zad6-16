@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>zadanie12</title>
+  <script type="text/javascript">
+    function obliczSekundy() {
+      // Wczytaj dane
+      var D1_bie = prompt("Podaj pierwszy dzień miesiąca stycznia", "");
+      var G1_bie = prompt("Podaj pierwszą godzinę", "");
+      var D2_bie = prompt("Podaj drugi dzień miesiąca stycznia", "");
+      var G2_bie = prompt("Podaj drugą godzinę", "");
+
+      // Konwersja na liczby
+      var D1 = parseInt(D1_bie);
+      var G1 = parseInt(G1_bie);
+      var D2 = parseInt(D2_bie);
+      var G2 = parseInt(G2_bie);
+
+      // Oblicz różnicę w sekundach
+      var roznicaSekundy = Math.abs((D2 - D1) * 24 * 60 * 60 + (G2 - G1) * 60 * 60);
+
+      // Wyświetl wynik w kolorze zielonym
+      var wynik = document.getElementById("wynik");
+      wynik.innerHTML = "<span style='color:green; font-size: " + (30 + D1) + "px;'>" +
+                        "Ilość sekund: " + roznicaSekundy + "</span>";
+    }
+  </script>
+</head>
+<body>
+  <input type="button" onclick="obliczSekundy()" value="Oblicz ilość sekund między dniami i godzinami" />
+  <div id="wynik"></div>
+</body>
+</html>

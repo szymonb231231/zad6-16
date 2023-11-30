@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>zad15</title>
+  <script type="text/javascript">
+    function sprawdzILiczNaUlamki() {
+      var m = prompt("Podaj liczbę naturalną większą od 0 (m):", "");
+      var m = parseInt(m);
+
+      if (Number.isInteger(m) && m > 0) {
+     
+        
+
+      
+
+        document.write("<p>Liczba " + m + " jest liczbą naturalną i została przekonwertowana na ułamki egipskie:</p>");
+        document.write("<p>1/" + m + " = ");
+        
+         document.write("1/"+ (m*2) + " + 1/"+ (m*2) );
+       
+        document.write("</p>");
+      } else {
+        alert("Podana wartość musi być liczbą naturalną większą od 0.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="button" onclick="sprawdzILiczNaUlamki()" value="Sprawdź i przekonwertuj" />
+</body>
+</html>

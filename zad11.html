@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>zadanie11</title>
+  <script type="text/javascript">
+    function obliczSekundy() {
+ 
+      var D1_iwi = prompt("Podaj pierwszy dzień miesiąca stycznia", "");
+      var D2_iwi = prompt("Podaj drugi dzień miesiąca stycznia", "");
+
+   
+      var D1 = parseInt(D1_iwi);
+      var D2 = parseInt(D2_iwi);
+
+  
+      var roznicaSekundy = Math.abs((D2 - D1) * 24 * 60 * 60);
+
+  
+      var wynik = document.getElementById("wynik");
+      wynik.innerHTML = "<span style='color:green; font-size: " + (30 + D1) + "px;'>" +
+                        "Ilość sekund: " + roznicaSekundy + "</span>";
+    }
+  </script>
+</head>
+<body>
+  <input type="button" onclick="obliczSekundy()" value="Oblicz ilość sekund między dniami" />
+  <div id="wynik"></div>
+</body>
+</html>
